@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../core/app_colors.dart';
+import '../../../core/app_colors.dart';
+import '../../navigation/screens/main_navigation.dart';
 import '../services/auth_service.dart';
-import '../widgets/auth/auth_widgets.dart';
-import 'main_navigation.dart';
+import '../widgets/auth_widgets.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});

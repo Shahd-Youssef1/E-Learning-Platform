@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../core/app_colors.dart';
-import '../data/app_data.dart';
-import '../models/course_model.dart';
+import '../../../core/app_colors.dart';
+import '../../../data/app_data.dart';
+import '../../../models/course_model.dart';
 
 class LessonPlayerScreen extends StatefulWidget {
   final CourseModel? course;
@@ -184,7 +184,7 @@ class _LessonPlayerScreenState extends State<LessonPlayerScreen> {
                         ),
                         boxShadow: [
                           BoxShadow(
-                            color: AppColors.primary.withOpacity(0.25),
+                            color: AppColors.primary.withValues(alpha: 0.25),
                             blurRadius: 14,
                             offset: const Offset(0, 6),
                           ),
@@ -204,7 +204,7 @@ class _LessonPlayerScreenState extends State<LessonPlayerScreen> {
                               width: 64,
                               height: 64,
                               decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.25),
+                                color: Colors.white.withValues(alpha: 0.25),
                                 shape: BoxShape.circle,
                                 border: Border.all(color: Colors.white, width: 2),
                               ),
@@ -223,7 +223,7 @@ class _LessonPlayerScreenState extends State<LessonPlayerScreen> {
                                   thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 6),
                                   overlayShape: const RoundSliderOverlayShape(overlayRadius: 12),
                                   activeTrackColor: Colors.white,
-                                  inactiveTrackColor: Colors.white.withOpacity(0.3),
+                                  inactiveTrackColor: Colors.white.withValues(alpha: 0.3),
                                   thumbColor: Colors.white,
                                 ),
                                 child: Slider(
@@ -358,7 +358,7 @@ class _LessonPlayerScreenState extends State<LessonPlayerScreen> {
                                 height: 32,
                                 decoration: BoxDecoration(
                                   color: isCompleted
-                                      ? AppColors.success.withOpacity(0.15)
+                                      ? AppColors.success.withValues(alpha: 0.15)
                                       : isCurrent
                                       ? AppColors.primary
                                       : AppColors.surfaceSecondary,

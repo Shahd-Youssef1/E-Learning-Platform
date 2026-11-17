@@ -1,7 +1,8 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter/material.dart';
+import 'core/app_pages.dart';
 import 'core/app_theme.dart';
-import 'screens/settings_screen.dart';
+import 'features/navigation/screens/main_navigation.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,15 +16,8 @@ Future<void> main() async {
   runApp(const EduFlowApp());
 }
 
-class EduFlowApp extends StatefulWidget {
+class EduFlowApp extends StatelessWidget {
   const EduFlowApp({super.key});
-
-  @override
-  State<EduFlowApp> createState() => _EduFlowAppState();
-}
-
-class _EduFlowAppState extends State<EduFlowApp> {
-  bool _isDarkMode = true;
 
   @override
   Widget build(BuildContext context) {
@@ -31,14 +25,8 @@ class _EduFlowAppState extends State<EduFlowApp> {
       debugShowCheckedModeBanner: false,
       title: 'EduFlow',
       theme: AppTheme.lightTheme,
-      home: SettingsScreen(
-        isDarkMode: _isDarkMode,
-        onThemeChanged: (val) {
-          setState(() {
-            _isDarkMode = val;
-          });
-        },
-      ),
+      home: const MainNavigation(),
+      routes: AppPages.routes,
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../core/app_colors.dart';
-import '../data/app_data.dart';
-import '../models/course_model.dart';
+import '../../../core/app_colors.dart';
+import '../../../data/app_data.dart';
+import '../../../models/course_model.dart';
 import 'lesson_player_screen.dart';
 
 class CourseDetailsScreen extends StatefulWidget {
@@ -173,7 +173,7 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
                           ),
                           boxShadow: [
                             BoxShadow(
-                              color: AppColors.primary.withOpacity(0.25),
+                              color: AppColors.primary.withValues(alpha: 0.25),
                               blurRadius: 14,
                               offset: const Offset(0, 6),
                             ),
@@ -188,7 +188,7 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
                               child: Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                                 decoration: BoxDecoration(
-                                  color: Colors.white.withOpacity(0.18),
+                                  color: Colors.white.withValues(alpha: 0.18),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Text(
@@ -205,7 +205,7 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
                               width: 62,
                               height: 62,
                               decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.25),
+                                color: Colors.white.withValues(alpha: 0.25),
                                 shape: BoxShape.circle,
                                 border: Border.all(color: Colors.white, width: 2),
                               ),
@@ -641,7 +641,7 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
                 height: 34,
                 decoration: BoxDecoration(
                   color: isCompleted
-                      ? AppColors.success.withOpacity(0.12)
+                      ? AppColors.success.withValues(alpha: 0.12)
                       : AppColors.surfacePurple,
                   shape: BoxShape.circle,
                 ),

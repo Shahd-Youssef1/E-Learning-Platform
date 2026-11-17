@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import '../core/app_colors.dart';
-import '../widgets/settings/settings_widgets.dart';
+import '../../../core/app_colors.dart';
+import '../widgets/settings_widgets.dart';
 
 class SettingsScreen extends StatefulWidget {
   final bool? isDarkMode;
   final ValueChanged<bool>? onThemeChanged;
+  final bool showBottomBar;
 
   const SettingsScreen({
     super.key,
     this.isDarkMode,
     this.onThemeChanged,
+    this.showBottomBar = true,
   });
 
   @override
@@ -70,20 +72,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
       textDirection: _isArabic ? TextDirection.rtl : TextDirection.ltr,
       child: Scaffold(
         backgroundColor: _darkMode ? const Color(0xFF090614) : AppColors.background,
-        bottomNavigationBar: SettingsBottomBar(
-          currentIndex: _currentNavIndex,
-          isDark: _darkMode,
-          isArabic: _isArabic,
-          onTap: (index) {
-            setState(() => _currentNavIndex = index);
-            if (index != 4) {
-              final labels = _isArabic
-                  ? ['الرئيسية', 'الكورسات', 'تقدمي', 'الاختبارات', 'حسابي']
-                  : ['Home', 'Courses', 'Progress', 'Quizzes', 'Profile'];
-              _showFeedback(_isArabic ? 'الانتقال إلى: ${labels[index]}' : 'Go to: ${labels[index]}');
-            }
-          },
-        ),
+        bottomNavigationBar: widget.showBottomBar
+            ? SettingsBottomBar(
+                currentIndex: _currentNavIndex,
+                isDark: _darkMode,
+                isArabic: _isArabic,
+                onTap: (index) {
+                  setState(() => _currentNavIndex = index);
+                  if (index != 4) {
+                    final labels = _isArabic
+                        ? ['الرئيسية', 'الكورسات', 'تقدمي', 'الاختبارات', 'حسابي']
+                        : ['Home', 'Courses', 'Progress', 'Quizzes', 'Profile'];
+                    _showFeedback(_isArabic ? 'الانتقال إلى: ${labels[index]}' : 'Go to: ${labels[index]}');
+                  }
+                },
+              )
+            : null,
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:e_learning_platform/screens/settings_screen.dart';
+import 'package:e_learning_platform/features/settings/screens/settings_screen.dart';
 
 void main() {
   testWidgets('SettingsScreen smoke test, theme, and language toggle', (WidgetTester tester) async {
