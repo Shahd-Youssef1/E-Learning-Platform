@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../courses/screens/courses_screen.dart';
+import '../../home/screens/home_screen.dart';
+import '../../settings/screens/settings_screen.dart';
 import '../widgets/bottom_nav_bar.dart';
 import 'placeholder_screen.dart';
 
@@ -14,11 +17,11 @@ class _MainNavigationState extends State<MainNavigation> {
   int currentIndex = 0;
 
   final List<Widget> screens = const [
-    PlaceholderScreen(title: 'Home'),
-    PlaceholderScreen(title: 'Courses'),
+    HomeScreen(),
+    CoursesScreen(),
     PlaceholderScreen(title: 'Progress'),
     PlaceholderScreen(title: 'Quizzes'),
-    PlaceholderScreen(title: 'Profile'),
+    SettingsScreen(showBottomBar: false),
   ];
 
   @override

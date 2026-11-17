@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/app_colors.dart';
+import '../../../core/app_colors.dart';
 
 class BottomNavBar extends StatelessWidget {
   final int currentIndex;
