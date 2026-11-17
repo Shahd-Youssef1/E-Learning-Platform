@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../widgets/bottom_nav_bar.dart';
 import 'placeholder_screen.dart';
+import 'settings_screen.dart';
 
 class MainNavigation extends StatefulWidget {
   const MainNavigation({super.key});
@@ -18,7 +19,7 @@ class _MainNavigationState extends State<MainNavigation> {
     PlaceholderScreen(title: 'Courses'),
     PlaceholderScreen(title: 'Progress'),
     PlaceholderScreen(title: 'Quizzes'),
-    PlaceholderScreen(title: 'Profile'),
+    SettingsScreen(),
   ];
 
   @override
