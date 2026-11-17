@@ -333,6 +333,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.13.0"
+<<<<<<< HEAD
   material_ui:
     dependency: transitive
     description:
@@ -341,6 +342,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.11.1"
+=======
+>>>>>>> cd400e8ba2eb60e1aee95a41702ab7fc353b4ae4
   meta:
     dependency: transitive
     description:
@@ -771,5 +774,10 @@ packages:
     source: hosted
     version: "2.1.1"
 sdks:
+<<<<<<< HEAD
   dart: ">=3.13.0 <4.0.0"
   flutter: ">=3.47.0"
+=======
+  dart: ">=3.11.0-0 <4.0.0"
+  flutter: ">=3.35.0"
+>>>>>>> cd400e8ba2eb60e1aee95a41702ab7fc353b4ae4
