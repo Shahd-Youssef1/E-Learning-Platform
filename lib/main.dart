@@ -1,5 +1,6 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter/material.dart';
+import 'core/app_pages.dart';
 import 'core/app_theme.dart';
 import 'screens/main_navigation.dart';
 
@@ -25,6 +26,7 @@ class EduFlowApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'EduFlow',
       theme: AppTheme.lightTheme,
+      routes: AppPages.routes,
       home: const MainNavigation(),
     );
   }
