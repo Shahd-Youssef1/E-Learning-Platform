@@ -1,8 +1,10 @@
+
 import 'package:flutter/material.dart';
 
 import '../../courses/screens/courses_screen.dart';
 import '../../home/screens/home_screen.dart';
-import '../../settings/screens/settings_screen.dart';
+import '../../profile/screens/profile_screen.dart';
+import '../../progress/screens/progress_screen.dart';
 import '../widgets/bottom_nav_bar.dart';
 import 'placeholder_screen.dart';
 
@@ -19,15 +21,18 @@ class _MainNavigationState extends State<MainNavigation> {
   final List<Widget> screens = const [
     HomeScreen(),
     CoursesScreen(),
-    PlaceholderScreen(title: 'Progress'),
+    ProgressScreen(),
     PlaceholderScreen(title: 'Quizzes'),
-    SettingsScreen(showBottomBar: false),
+    ProfileScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(index: currentIndex, children: screens),
+      body: IndexedStack(
+        index: currentIndex,
+        children: screens,
+      ),
       bottomNavigationBar: BottomNavBar(
         currentIndex: currentIndex,
         onTap: (index) {
